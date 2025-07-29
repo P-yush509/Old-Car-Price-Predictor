@@ -4,7 +4,8 @@ import pickle
 
 cars = pd.read_csv('cleaned_cars.csv')
 
-lr_model = pickle.load(open('carPricePredictionModel.pkl', 'rb'))
+with open("carPricePredictionModel.pkl", "rb") as file:
+    lr_model = pickle.load(file)
 
 st.title("Old Car Reselling Price Prediction")
 
